@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Project, SkillCategory, NavLinkItem, SocialLink, EducationItem, CourseItem } from './types';
 import { 
@@ -19,19 +18,19 @@ export const NAV_LINKS: NavLinkItem[] = [
 
 export const PORTFOLIO_OWNER = {
   name: "Tharusha Dilshan Bandara",
-  title: "AI enthisiast | Software Developer | Graphic Designer",
+  title: "AI Enthusiast | Software Developer | Graphic Designer",
   bioSummary: "Computer Science undergraduate specializing in Artificial Intelligence",
   aboutMeDetailed: [
     "Passionate and detail-oriented Computer Science undergraduate specializing in Artificial Intelligence and software development. Committed to building innovative, data-driven solutions that optimize performance, improve user experience, and expand the potential of emerging technologies.",
     "I am currently pursuing my BSc (Hons) in Computer Science with a focus on Artificial Intelligence and am enthusiastic about applying my growing knowledge to real-world challenges. My academic journey is complemented by practical project experience and a continuous drive to learn new skills.",
     "Beyond my technical pursuits, I am driven by a philosophy of continuous learning and creative problem-solving. I believe that the most impactful solutions arise from a blend of analytical thinking, user-centric design, and a collaborative spirit. I'm always eager to explore new domains and leverage technology to make a positive difference."
   ],
-  profileImageUrl: 'https://picsum.photos/seed/tharusha/300/300', // Placeholder - Tharusha should replace this
+  profileImageUrl: 'components/images/Photo.jpg', // Placeholder - Tharusha should replace this
   resumeUrl: 'cv.pdf', // Placeholder - Tharusha to link his actual resume PDF
   contactEmail: "tharushadil0@gmail.com",
   contactPhone: "+94769032125",
-  portfolioUrl: "http://tdbandara.my.canva.site/portfolio",
   address: "No68 Padukka Road, Padukka Road, 12400 Horana", // For reference, not directly displayed by default
+  portfolioUrl: "https://tharushadbandara.dev", // Added portfolio URL property
 };
 
 export const EDUCATION_DATA: EducationItem[] = [
@@ -59,6 +58,28 @@ export const PROJECTS_DATA: Project[] = [
     // repoUrl: '#', // Not specified in resume
     year: 2023, // Assumed, as it's a significant project for an undergraduate
     role: 'Developer' // Inferred
+  },
+  {
+    id: 'fiton',
+    title: 'FIT ON - Fashion Branding & Product Design',
+    description: 'Branding and product design for FIT ON, a modern fashion brand. Includes logo, visual identity, and product showcase.',
+    longDescription: 'Led the creative direction for FIT ON, developing a cohesive brand identity and product design. The project features logo design, color palette, typography, and a showcase of branded products. Emphasis on modern aesthetics and market appeal.',
+    imageUrl: 'components/images/fitson.jpg',
+    tags: ['Branding', 'Product Design', 'Fashion', 'Logo Design', 'Visual Identity'],
+    liveUrl: 'https://www.behance.net/gallery/223801979/FIT-ON-FASHION-BRANDING-PRODUCT-DESIGN-SHOWCASE',
+    year: 2024,
+    role: 'Designer'
+  },
+  {
+    id: 'teewave',
+    title: 'TEE WAVE - Fashion Branding & Product Design',
+    description: 'Branding and product design for TEE WAVE, a creative fashion brand. Includes logo, visual identity, and product showcase.',
+    longDescription: 'Developed the TEE WAVE brand from concept to execution, including logo, color scheme, and product mockups. The project highlights creative direction, visual storytelling, and product presentation for a fashion audience.',
+    imageUrl: 'components/images/teewave.jpg',
+    tags: ['Branding', 'Product Design', 'Fashion', 'Logo Design', 'Visual Identity'],
+    liveUrl: 'https://www.behance.net/gallery/225426545/TEE-WAVE-FASHION-BRANDING-PRODUCT-DESIGN-SHOWCASE',
+    year: 2024,
+    role: 'Designer'
   }
 ];
 
@@ -122,10 +143,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
     icon: <BehanceIcon className="w-6 h-6" />
   },
   {
-    id: 'portfolio',
-    name: 'Portfolio',
-    url: PORTFOLIO_OWNER.portfolioUrl,
-    icon: <LinkIcon className="w-6 h-6" />
+    id: 'mobile',
+    name: 'Mobile', // Changed from 'Portfolio' to 'Mobile'
+    url: `tel:${PORTFOLIO_OWNER.contactPhone}`, // Changed to mobile phone link
+    icon: <DevicePhoneMobileIcon className="w-6 h-6" /> // Changed icon to mobile phone
   },
   {
     id: 'email',

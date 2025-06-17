@@ -35,8 +35,8 @@ const Skills: React.FC<SkillsProps> = ({ skillCategories }) => {
   return (
     <Section id="skills" title="Technologies & Skills" className="bg-slate-800">
       <div className="space-y-12">
-        {skillCategories.map((category) => (
-          <div key={category.id} className="animate-fade-in-up" style={{animationDelay: `${parseInt(category.id.split('-')[1] || '0') * 100}ms`}}>
+        {skillCategories.map((category, idx) => (
+          <div key={category.id} className="animate-fade-in-up" style={{animationDelay: `${idx * 100}ms`}}>
             <h3 className="text-2xl font-semibold text-text-main mb-6 text-center md:text-left">{category.name}</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {category.skills.map((skill) => (

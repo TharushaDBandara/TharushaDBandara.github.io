@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ name, title, summary, profileImageUrl, soci
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4">
             Hi, I'm <span className="text-primary">{name}</span>
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-text-muted mb-8 font-medium">
+          <p className="text-xl sm:text-2xl md:text-3xl text-text-muted mb-8 font-small">
             {title}
           </p>
           <p className="text-lg text-slate-300 mb-10 max-w-xl mx-auto">
@@ -52,7 +52,7 @@ const Hero: React.FC<HeroProps> = ({ name, title, summary, profileImageUrl, soci
             </a>
             )}
           </div>
-          <div className="flex justify-center space-x-6 mb-10">
+          <div className="flex justify-center space-x-8 mb-10">
             {socialLinks.map((link) => (
               <a
                 key={link.id}
@@ -60,7 +60,7 @@ const Hero: React.FC<HeroProps> = ({ name, title, summary, profileImageUrl, soci
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.name}
-                className="text-text-muted hover:text-primary transition-transform duration-300 hover:scale-125"
+                className="text-text-muted hover:text-primary transition-transform duration-300 hover:scale-125 flex items-center justify-center w-12 h-12 rounded-full bg-[#232c3d]"
               >
                 {link.icon}
               </a>
@@ -68,13 +68,7 @@ const Hero: React.FC<HeroProps> = ({ name, title, summary, profileImageUrl, soci
           </div>
         </div>
       </div>
-       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-        <a href="#about" aria-label="Scroll to about section">
-          <svg className="w-8 h-8 text-primary" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </a>
-      </div>
+      {/* Removed the bouncing arrow at the bottom */}
     </section>
   );
 };
