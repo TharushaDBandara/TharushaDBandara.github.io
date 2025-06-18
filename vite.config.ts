@@ -5,6 +5,15 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       base: '/', // Set base for GitHub Pages user site
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks: undefined,
+          }
+        },
+        assetsDir: 'assets',
+        outDir: 'dist'
+      },
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
