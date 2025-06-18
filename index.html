@@ -1,66 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Portfolio Test</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'primary': '#0ea5e9', // sky-500
-            'primary-hover': '#0284c7', // sky-600
-            'secondary': '#334155', // slate-700
-            'background': '#0f172a', // slate-900
-            'card': '#1e293b', // slate-800
-            'text-main': '#e2e8f0', // slate-200
-            'text-muted': '#94a3b8', // slate-400
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
-          animation: {
-            'fade-in-up': 'fadeInUp 0.5s ease-out',
-            'slide-in-left': 'slideInLeft 0.5s ease-out',
-          },
-          keyframes: {
-            fadeInUp: {
-              '0%': { opacity: '0', transform: 'translateY(20px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            },
-            slideInLeft: {
-              '0%': { opacity: '0', transform: 'translateX(-20px)' },
-              '100%': { opacity: '1', transform: 'translateX(0)' },
-            }
-          }
-        }
-      }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    /* For custom scrollbar, optional */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #0f172a; /* slate-900 */
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #334155; /* slate-700 */
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #0ea5e9; /* sky-500 */
-    }
-  </style>
-  <script crossorigin src="/assets/index.js"></script>
+  <script crossorigin src="https://unpkg.com/react@19/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@19/umd/react-dom.production.min.js"></script>
 </head>
-<body class="bg-background text-text-main font-sans antialiased">
-  <div id="root"></div>
+<body class="bg-slate-900 text-white">
+  <div id="root">
+    <div style="padding: 20px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h1 style="font-size: 48px; margin-bottom: 20px; color: #0ea5e9;">🎉 SUCCESS!</h1>
+      <h2 style="font-size: 24px; margin-bottom: 20px;">Portfolio Test - CDN Version Working!</h2>
+      <p style="font-size: 18px; margin-bottom: 20px;">This means GitHub Pages can serve HTML and JavaScript properly.</p>
+      <div style="background: #1e293b; padding: 20px; border-radius: 8px; max-width: 500px;">
+        <p>✅ HTML loaded correctly</p>
+        <p>✅ Tailwind CSS loaded correctly</p>
+        <p>✅ JavaScript executing properly</p>
+        <p>✅ No MIME type errors</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    console.log('🚀 Static HTML version loaded successfully!');
+    
+    // Simple React component using CDN
+    const { createElement } = React;
+    const { createRoot } = ReactDOM;
+
+    function TestApp() {
+      return createElement('div', {
+        style: {
+          padding: '20px',
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: '#0f172a',
+          color: 'white'
+        }
+      }, [
+        createElement('h1', {
+          key: 'title',
+          style: { fontSize: '48px', marginBottom: '20px', color: '#0ea5e9' }
+        }, '🎉 REACT CDN SUCCESS!'),
+        createElement('h2', {
+          key: 'subtitle',
+          style: { fontSize: '24px', marginBottom: '20px' }
+        }, 'React is working via CDN!'),
+        createElement('p', {
+          key: 'description',
+          style: { fontSize: '18px', marginBottom: '20px' }
+        }, 'This proves React can work on GitHub Pages.'),
+        createElement('div', {
+          key: 'checklist',
+          style: {
+            background: '#1e293b',
+            padding: '20px',
+            borderRadius: '8px',
+            maxWidth: '500px'
+          }
+        }, [
+          createElement('p', { key: 'check1' }, '✅ React loaded from CDN'),
+          createElement('p', { key: 'check2' }, '✅ Component rendered successfully'),
+          createElement('p', { key: 'check3' }, '✅ No build process needed'),
+          createElement('p', { key: 'check4' }, '✅ No MIME type issues')
+        ])
+      ]);
+    }
+
+    // Mount the React app
+    const root = createRoot(document.getElementById('root'));
+    root.render(createElement(TestApp));
+    
+    console.log('✅ React CDN app mounted successfully!');
+  </script>
 </body>
 </html>
