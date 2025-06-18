@@ -9,10 +9,15 @@ export default defineConfig(({ mode }) => {
         rollupOptions: {
           output: {
             manualChunks: undefined,
+            format: 'iife', // Change to IIFE format to avoid ES module MIME type issues
+            entryFileNames: 'assets/[name].js',
+            chunkFileNames: 'assets/[name].js',
+            assetFileNames: 'assets/[name].[ext]'
           }
         },
         assetsDir: 'assets',
-        outDir: 'dist'
+        outDir: 'dist',
+        target: 'es2015' // Lower target for better compatibility
       },
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),

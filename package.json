@@ -3,10 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://tharushadbandara.github.io",
-  "scripts": {
+  "homepage": "https://tharushadbandara.github.io",  "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node fix-html.cjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
