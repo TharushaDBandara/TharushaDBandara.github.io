@@ -7,10 +7,15 @@ export default defineConfig(({ mode }) => {
       base: '/', // Set base for GitHub Pages user site
       build: {
         rollupOptions: {
+          external: ['react', 'react-dom'], // Use external React from CDN
           output: {
-            manualChunks: undefined,
-            format: 'iife', // Change to IIFE format to avoid ES module MIME type issues
-            entryFileNames: 'assets/[name].js',
+            globals: {
+              react: 'React',
+              'react-dom': 'ReactDOM'
+            },
+            format: 'umd', // UMD format works better with externals
+            name: 'Portfolio', // Global name for UMD
+            entryFileNames: 'assets/portfolio.js',
             chunkFileNames: 'assets/[name].js',
             assetFileNames: 'assets/[name].[ext]'
           }

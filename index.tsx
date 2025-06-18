@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.simple';
+import App from './App';
 
 console.log('🚀 JavaScript is executing!');
 console.log('🔍 Looking for root element...');
