@@ -55,7 +55,7 @@ export const PROJECTS_DATA: Project[] = [
     imageUrl: 'https://picsum.photos/seed/parkmate/600/400', // Placeholder
     tags: ['AI', 'IoT', 'License Plate Recognition', 'Mobile Development', 'Real-time Systems', 'Payment Processing', 'iPad App'],
     // liveUrl: '#', // Not specified in resume
-    // repoUrl: '#', // Not specified in resume
+    repoUrl: 'https://github.com/gamithasam/ParkMate.git', // Not specified in resume
     year: 2023, // Assumed, as it's a significant project for an undergraduate
     role: 'Developer' // Inferred
   },
