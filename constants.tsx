@@ -52,10 +52,9 @@ export const PROJECTS_DATA: Project[] = [
     title: 'ParkMate - Automated Smart Parking System',
     description: 'Developed an AI-powered smart parking solution integrating IoT, license plate recognition, and a mobile application.',
     longDescription: 'Achieved a 70% reduction in manual processing and improved space utilization by 50%. Engineered real-time availability tracking, entry detection, reservation features, and payment processing. Designed an iPad app for parking lot owners to monitor performance statistics and manage operations efficiently.',
-    imageUrl: 'https://picsum.photos/seed/parkmate/600/400', // Placeholder
+    imageUrl: 'components/images/Parkmate.png',
     tags: ['AI', 'IoT', 'License Plate Recognition', 'Mobile Development', 'Real-time Systems', 'Payment Processing', 'iPad App'],
-    liveUrl: 'https://github.com/gamithasam/ParkMate.git', // Not specified in resume
-    //repoUrl: 'https://github.com/gamithasam/ParkMate.git', // Not specified in resume
+    repoUrl: 'https://github.com/gamithasam/ParkMate.git',
     year: 2023, // Assumed, as it's a significant project for an undergraduate
     role: 'Developer' // Inferred
   },
