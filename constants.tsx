@@ -54,8 +54,8 @@ export const PROJECTS_DATA: Project[] = [
     longDescription: 'Achieved a 70% reduction in manual processing and improved space utilization by 50%. Engineered real-time availability tracking, entry detection, reservation features, and payment processing. Designed an iPad app for parking lot owners to monitor performance statistics and manage operations efficiently.',
     imageUrl: 'https://picsum.photos/seed/parkmate/600/400', // Placeholder
     tags: ['AI', 'IoT', 'License Plate Recognition', 'Mobile Development', 'Real-time Systems', 'Payment Processing', 'iPad App'],
-    // liveUrl: '#', // Not specified in resume
-    repoUrl: 'https://github.com/gamithasam/ParkMate.git', // Not specified in resume
+    liveUrl: 'https://github.com/gamithasam/ParkMate.git', // Not specified in resume
+    //repoUrl: 'https://github.com/gamithasam/ParkMate.git', // Not specified in resume
     year: 2023, // Assumed, as it's a significant project for an undergraduate
     role: 'Developer' // Inferred
   },
