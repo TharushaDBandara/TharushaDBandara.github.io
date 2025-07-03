@@ -63,21 +63,6 @@
       animation: slideInLeft 0.5s ease-out;
     }
   </style>
-  <script async crossorigin src="/assets/portfolio.js"></script>
-
-  <!-- React CDN - Using the working approach -->
-  <script crossorigin src="https://unpkg.com/react@19/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@19/umd/react-dom.production.min.js"></script>
-  <script async crossorigin src="/assets/portfolio.js"></script>
-
-  <!-- React CDN - Using the working approach -->
-  <script crossorigin src="https://unpkg.com/react@19/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@19/umd/react-dom.production.min.js"></script>
-  <script async crossorigin src="/assets/portfolio.js"></script>
-
-  <!-- React CDN - Using the working approach -->
-  <script crossorigin src="https://unpkg.com/react@19/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@19/umd/react-dom.production.min.js"></script>
 </head>
 <body class="bg-background text-text-main font-sans antialiased">
   <!-- Navigation -->
@@ -118,7 +103,7 @@
   <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4">
     <div class="max-w-4xl mx-auto text-center">
       <div class="mb-8 animate-fade-in-up">
-        <img src="/assets/Photo.jpg" alt="Tharusha Dilshan Bandara" 
+        <img src="components/images/Photo.jpg" alt="Tharusha Dilshan Bandara" 
              class="w-48 h-48 rounded-full mx-auto mb-8 object-cover border-4 border-primary"
              onerror="this.src='https://via.placeholder.com/192x192/0ea5e9/ffffff?text=TB'">
       </div>
@@ -191,7 +176,8 @@
         
         <!-- ParkMate Project -->
         <div class="bg-card rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-          <img src="https://picsum.photos/seed/parkmate/600/400" alt="ParkMate" class="w-full h-48 object-cover">
+          <img src="components/images/Parkmate.png" alt="ParkMate" class="w-full h-48 object-cover"
+               onerror="this.src='https://picsum.photos/seed/parkmate/600/400'">
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-3 text-text-main">ParkMate - Smart Parking System</h3>
             <p class="text-text-muted mb-4">AI-powered smart parking solution integrating IoT, license plate recognition, and mobile application.</p>
@@ -200,15 +186,19 @@
               <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">IoT</span>
               <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs">Mobile Development</span>
             </div>
-            <div class="flex gap-4">
+            <div class="flex gap-4 items-center">
               <span class="text-text-muted text-sm">2023</span>
+              <a href="https://github.com/gamithasam/ParkMate.git" 
+                 target="_blank" class="text-primary hover:text-primary-hover text-sm">
+                View on GitHub →
+              </a>
             </div>
           </div>
         </div>
 
         <!-- FIT ON Project -->
         <div class="bg-card rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-          <img src="/assets/fitson.jpg" alt="FIT ON" class="w-full h-48 object-cover"
+          <img src="components/images/fitson.jpg" alt="FIT ON" class="w-full h-48 object-cover"
                onerror="this.src='https://picsum.photos/seed/fiton/600/400'">
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-3 text-text-main">FIT ON - Fashion Branding</h3>
@@ -230,7 +220,7 @@
 
         <!-- TEE WAVE Project -->
         <div class="bg-card rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-          <img src="/assets/teewave.jpg" alt="TEE WAVE" class="w-full h-48 object-cover"
+          <img src="components/images/teewave.jpg" alt="TEE WAVE" class="w-full h-48 object-cover"
                onerror="this.src='https://picsum.photos/seed/teewave/600/400'">
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-3 text-text-main">TEE WAVE - Fashion Branding</h3>
