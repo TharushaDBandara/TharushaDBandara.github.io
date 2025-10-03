@@ -190,6 +190,7 @@
       flex-direction: column;
       gap: 1rem;
       justify-content: center;
+      align-items: center;
       animation: fadeInUp 0.5s ease-out 0.4s both;
     }
 
@@ -226,6 +227,7 @@
     @media (min-width: 640px) {
       .hero-buttons {
         flex-direction: row;
+        flex-wrap: wrap;
       }
     }
 
@@ -346,11 +348,12 @@
       color: var(--primary);
       border-radius: 9999px;
       font-size: 0.75rem;
+      font-weight: 500;
     }
 
     .project-links {
       display: flex;
-      gap: 1rem;
+      justify-content: space-between;
       align-items: center;
     }
 
@@ -362,7 +365,124 @@
     .project-link {
       color: var(--primary);
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .project-link:hover {
+      color: var(--primary-hover);
+    }
+
+    /* Project Categories */
+    .project-category {
+      margin-bottom: 3rem;
+    }
+
+    .category-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+      .mobile-menu-btn {
+        display: none;
+      }
+      .hero-title {
+        font-size: 4.5rem;
+      }
+      .hero-subtitle {
+        font-size: 1.5rem;
+      }
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Card Styles */
+    .card {
+      background-color: var(--card);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+    }
+
+    .project-card {
+      background-color: var(--card);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 12rem;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 1.5rem;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+    }
+
+    .project-description {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      padding: 0.25rem 0.75rem;
+      background-color: rgba(14, 165, 233, 0.2);
+      color: var(--primary);
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .project-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .project-year {
+      color: var(--text-muted);
       font-size: 0.875rem;
+    }
+
+    .project-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
       transition: color 0.3s ease;
     }
 
@@ -672,73 +792,90 @@
   <!-- Projects Section -->
   <section id="projects" class="section">
     <div class="container-lg">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="grid grid-3">
-        
-        <!-- ParkMate Project -->
-        <div class="project-card">
-          <img src="components/images/Parkmate.png" alt="ParkMate" class="project-image"
-               onerror="this.src='https://picsum.photos/seed/parkmate/600/400'">
-          <div class="project-content">
-            <h3 class="project-title">ParkMate - Smart Parking System</h3>
-            <p class="project-description">AI-powered smart parking solution integrating IoT, license plate recognition, and mobile application.</p>
-            <div class="tags">
-              <span class="tag">AI</span>
-              <span class="tag">IoT</span>
-              <span class="tag">Mobile Development</span>
-            </div>
-            <div class="project-links">
-              <span class="project-year">2023</span>
-              <a href="https://github.com/gamithasam/ParkMate.git" target="_blank" class="project-link">
-                View on GitHub →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- FIT ON Project -->
-        <div class="project-card">
-          <img src="components/images/fitson.jpg" alt="FIT ON" class="project-image"
-               onerror="this.src='https://picsum.photos/seed/fiton/600/400'">
-          <div class="project-content">
-            <h3 class="project-title">FIT ON - Fashion Branding</h3>
-            <p class="project-description">Branding and product design for FIT ON fashion brand including logo, visual identity, and product showcase.</p>
-            <div class="tags">
-              <span class="tag">Branding</span>
-              <span class="tag">Product Design</span>
-              <span class="tag">Fashion</span>
-            </div>
-            <div class="project-links">
-              <span class="project-year">2024</span>
-              <a href="https://www.behance.net/gallery/223801979/FIT-ON-FASHION-BRANDING-PRODUCT-DESIGN-SHOWCASE" target="_blank" class="project-link">
-                View on Behance →
-              </a>
+      <h2 class="section-title">Projects</h2>
+      
+      <!-- Academic Projects -->
+      <div class="project-category">
+        <h3 class="category-title">Academic Projects</h3>
+        <div class="grid grid-3">
+          
+          <!-- ParkMate Project -->
+          <div class="project-card">
+            <img src="components/images/Parkmate.png" alt="ParkMate" class="project-image"
+                 onerror="this.src='https://picsum.photos/seed/parkmate/600/400'">
+            <div class="project-content">
+              <h3 class="project-title">ParkMate - Smart Parking System</h3>
+              <p class="project-description">AI-powered smart parking solution integrating IoT, license plate recognition, and mobile application.</p>
+              <div class="tags">
+                <span class="tag">AI</span>
+                <span class="tag">IoT</span>
+                <span class="tag">Mobile Development</span>
+              </div>
+              <div class="project-links">
+                <span class="project-year">2023</span>
+                <a href="parkmate-project.html" class="project-link">
+                  View Project →
+                </a>
+                <a href="https://github.com/gamithasam/ParkMate.git" target="_blank" class="project-link">
+                  View on GitHub →
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- TEE WAVE Project -->
-        <div class="project-card">
-          <img src="components/images/teewave.jpg" alt="TEE WAVE" class="project-image"
-               onerror="this.src='https://picsum.photos/seed/teewave/600/400'">
-          <div class="project-content">
-            <h3 class="project-title">TEE WAVE - Fashion Branding</h3>
-            <p class="project-description">Creative fashion brand development from concept to execution, including logo and product mockups.</p>
-            <div class="tags">
-              <span class="tag">Branding</span>
-              <span class="tag">Visual Identity</span>
-              <span class="tag">Creative Direction</span>
-            </div>
-            <div class="project-links">
-              <span class="project-year">2024</span>
-              <a href="https://www.behance.net/gallery/225426545/TEE-WAVE-FASHION-BRANDING-PRODUCT-DESIGN-SHOWCASE" target="_blank" class="project-link">
-                View on Behance →
-              </a>
-            </div>
-          </div>
         </div>
-
       </div>
+
+      <!-- Professional Projects -->
+      <div class="project-category">
+        <h3 class="category-title">Professional Projects</h3>
+        <div class="grid grid-3">
+          
+          <!-- FIT ON Project -->
+          <div class="project-card">
+            <img src="components/images/fitson.jpg" alt="FIT ON" class="project-image"
+                 onerror="this.src='https://picsum.photos/seed/fiton/600/400'">
+            <div class="project-content">
+              <h3 class="project-title">FIT ON - Fashion Branding</h3>
+              <p class="project-description">Branding and product design for FIT ON fashion brand including logo, visual identity, and product showcase.</p>
+              <div class="tags">
+                <span class="tag">Branding</span>
+                <span class="tag">Product Design</span>
+                <span class="tag">Fashion</span>
+              </div>
+              <div class="project-links">
+                <span class="project-year">2024</span>
+                <a href="https://www.behance.net/gallery/223801979/FIT-ON-FASHION-BRANDING-PRODUCT-DESIGN-SHOWCASE" target="_blank" class="project-link">
+                  View on Behance →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEE WAVE Project -->
+          <div class="project-card">
+            <img src="components/images/teewave.jpg" alt="TEE WAVE" class="project-image"
+                 onerror="this.src='https://picsum.photos/seed/teewave/600/400'">
+            <div class="project-content">
+              <h3 class="project-title">TEE WAVE - Fashion Branding</h3>
+              <p class="project-description">Creative fashion brand development from concept to execution, including logo and product mockups.</p>
+              <div class="tags">
+                <span class="tag">Branding</span>
+                <span class="tag">Visual Identity</span>
+                <span class="tag">Creative Direction</span>
+              </div>
+              <div class="project-links">
+                <span class="project-year">2024</span>
+                <a href="https://www.behance.net/gallery/225426545/TEE-WAVE-FASHION-BRANDING-PRODUCT-DESIGN-SHOWCASE" target="_blank" class="project-link">
+                  View on Behance →
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
