@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tharusha Dilshan Bandara - Portfolio</title>
+  <title>Tharusha Dilshan Bandara | AI Engineer & Graphic Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     /* CSS Variables for Theme Colors */
     :root {
-      --primary: #0ea5e9;
-      --primary-hover: #0284c7;
-      --secondary: #334155;
-      --background: #0f172a;
-      --card: #1e293b;
-      --text-main: #e2e8f0;
+      --primary: #38bdf8;
+      --primary-hover: #0ea5e9;
+      --accent: #f97316;
+      --secondary: #1f2937;
+      --background: #0b1120;
+      --card: #111827;
+      --text-main: #f8fafc;
       --text-muted: #94a3b8;
     }
 
@@ -32,7 +33,7 @@
     }
 
     body {
-      background-color: var(--background);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.08), transparent 45%), var(--background);
       color: var(--text-main);
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
@@ -138,13 +139,30 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 5rem 1rem 0;
+      padding: 6rem 1rem 2rem;
+      background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.18), transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(249, 115, 22, 0.16), transparent 40%);
     }
 
     .hero-container {
       max-width: 56rem;
       margin: 0 auto;
       text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--primary);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(56, 189, 248, 0.25);
     }
 
     .hero-image {
@@ -171,7 +189,7 @@
     .hero-subtitle {
       font-size: 1.25rem;
       color: var(--text-muted);
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       animation: fadeInUp 0.5s ease-out 0.2s both;
     }
 
@@ -179,10 +197,28 @@
       font-size: 1.125rem;
       color: var(--text-muted);
       margin-bottom: 2rem;
-      max-width: 42rem;
+      max-width: 44rem;
       margin-left: auto;
       margin-right: auto;
       animation: fadeInUp 0.5s ease-out 0.3s both;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+      animation: fadeInUp 0.5s ease-out 0.35s both;
+    }
+
+    .chip {
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      background-color: rgba(148, 163, 184, 0.15);
+      color: var(--text-main);
+      font-size: 0.85rem;
+      border: 1px solid rgba(148, 163, 184, 0.2);
     }
 
     .hero-buttons {
@@ -267,6 +303,13 @@
       color: var(--primary);
     }
 
+    .section-intro {
+      max-width: 40rem;
+      margin: 0 auto 3rem;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
     .grid {
       display: grid;
       gap: 2rem;
@@ -287,6 +330,9 @@
       .grid-3 {
         grid-template-columns: repeat(2, 1fr);
       }
+      .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (min-width: 1024px) {
@@ -297,16 +343,68 @@
 
     /* Card Styles */
     .card {
-      background-color: var(--card);
-      border-radius: 0.5rem;
-      padding: 1.5rem;
+      background-color: rgba(17, 24, 39, 0.85);
+      border-radius: 0.75rem;
+      padding: 1.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      box-shadow: 0 20px 40px -30px rgba(15, 23, 42, 0.8);
+    }
+
+    .focus-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .focus-card {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(17, 24, 39, 0.9));
+      border-radius: 1rem;
+      padding: 2rem;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .focus-card:nth-child(2) {
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.14), rgba(17, 24, 39, 0.92));
+      border-color: rgba(249, 115, 22, 0.25);
+    }
+
+    .focus-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -25px rgba(15, 23, 42, 0.8);
+    }
+
+    .focus-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .focus-text {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .focus-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .focus-tag {
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      color: var(--text-main);
+      background-color: rgba(15, 23, 42, 0.4);
+      border: 1px solid rgba(148, 163, 184, 0.2);
     }
 
     .project-card {
-      background-color: var(--card);
-      border-radius: 0.5rem;
+      background-color: rgba(17, 24, 39, 0.9);
+      border-radius: 0.75rem;
       overflow: hidden;
       transition: transform 0.3s ease;
+      border: 1px solid rgba(148, 163, 184, 0.12);
     }
 
     .project-card:hover {
@@ -414,9 +512,11 @@
 
     /* Card Styles */
     .card {
-      background-color: var(--card);
-      border-radius: 0.5rem;
-      padding: 1.5rem;
+      background-color: rgba(17, 24, 39, 0.85);
+      border-radius: 0.75rem;
+      padding: 1.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      box-shadow: 0 20px 40px -30px rgba(15, 23, 42, 0.8);
     }
 
     .project-card {
@@ -698,6 +798,7 @@
         </div>
         <div class="nav-links">
           <a href="#home" class="nav-link">Home</a>
+          <a href="#focus" class="nav-link">Focus</a>
           <a href="#about" class="nav-link">About</a>
           <a href="#projects" class="nav-link">Projects</a>
           <a href="#skills" class="nav-link">Skills</a>
@@ -712,6 +813,7 @@
       <div id="mobile-menu" class="mobile-menu">
         <div class="mobile-menu-links">
           <a href="#home" class="mobile-menu-link">Home</a>
+          <a href="#focus" class="mobile-menu-link">Focus</a>
           <a href="#about" class="mobile-menu-link">About</a>
           <a href="#projects" class="mobile-menu-link">Projects</a>
           <a href="#skills" class="mobile-menu-link">Skills</a>
@@ -726,25 +828,68 @@
     <div class="hero-container">
       <div class="mb-8">
         <img src="components/images/Photo.jpg" alt="Tharusha Dilshan Bandara" class="hero-image"
-             onerror="this.src='https://via.placeholder.com/192x192/0ea5e9/ffffff?text=TB'">
+             onerror="this.src='https://via.placeholder.com/192x192/38bdf8/ffffff?text=TB'">
       </div>
+      <div class="hero-badge">AI Engineer • Graphic Designer</div>
       <h1 class="hero-title">
         <span class="hero-title-primary">Tharusha</span>
         <span>Dilshan Bandara</span>
       </h1>
       <p class="hero-subtitle">
-        AI Enthusiast | Software Developer | Graphic Designer
+        AI Engineer | Graphic Designer | Creative Technologist
       </p>
       <p class="hero-description">
-        Computer Science undergraduate specializing in Artificial Intelligence
+        I craft intelligent products and bold visual identities, blending machine learning with human-centered design.
       </p>
+      <div class="hero-chips">
+        <span class="chip">Machine Learning</span>
+        <span class="chip">Computer Vision</span>
+        <span class="chip">Brand Identity</span>
+        <span class="chip">UI/UX Design</span>
+      </div>
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-primary">
-          View My Work
+          View AI + Design Work
         </a>
         <a href="cv.pdf" target="_blank" class="btn btn-outline">
           Download CV
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Focus Section -->
+  <section id="focus" class="section">
+    <div class="container">
+      <h2 class="section-title">What I Do</h2>
+      <p class="section-intro">
+        I help teams transform ideas into intelligent products and visual stories, blending engineering rigor with design craft.
+      </p>
+      <div class="focus-grid">
+        <div class="focus-card">
+          <h3 class="focus-title">AI Engineering</h3>
+          <p class="focus-text">
+            Designing machine learning solutions, data-driven prototypes, and AI-powered experiences that solve real-world problems.
+          </p>
+          <div class="focus-tags">
+            <span class="focus-tag">ML Models</span>
+            <span class="focus-tag">Computer Vision</span>
+            <span class="focus-tag">Data Pipelines</span>
+            <span class="focus-tag">Product Prototyping</span>
+          </div>
+        </div>
+        <div class="focus-card">
+          <h3 class="focus-title">Graphic Design</h3>
+          <p class="focus-text">
+            Crafting brand identities, product visuals, and marketing assets that connect with audiences and elevate products.
+          </p>
+          <div class="focus-tags">
+            <span class="focus-tag">Brand Strategy</span>
+            <span class="focus-tag">Visual Identity</span>
+            <span class="focus-tag">Campaign Design</span>
+            <span class="focus-tag">UI/UX Systems</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -756,13 +901,13 @@
       <div class="grid grid-2" style="align-items: center;">
         <div>
           <p class="text-lg text-muted mb-6">
-            Passionate and detail-oriented Computer Science undergraduate specializing in Artificial Intelligence and software development. Committed to building innovative, data-driven solutions that optimize performance, improve user experience, and expand the potential of emerging technologies.
+            AI engineering and graphic design are the two lenses through which I approach modern product experiences. I focus on building intelligent systems that are both functional and visually compelling.
           </p>
           <p class="text-lg text-muted mb-6">
-            I am currently pursuing my BSc (Hons) in Computer Science with a focus on Artificial Intelligence and am enthusiastic about applying my growing knowledge to real-world challenges. My academic journey is complemented by practical project experience and a continuous drive to learn new skills.
+            I am currently pursuing my BSc (Hons) in Computer Science with a focus on Artificial Intelligence, while leading branding and visual design projects. My work balances technical precision with creative direction.
           </p>
           <p class="text-lg text-muted">
-            Beyond my technical pursuits, I am driven by a philosophy of continuous learning and creative problem-solving. I believe that the most impactful solutions arise from a blend of analytical thinking, user-centric design, and a collaborative spirit.
+            Beyond the tools and frameworks, I believe the most impactful solutions emerge when analytical thinking meets human-centered design and thoughtful storytelling.
           </p>
         </div>
         <div>
@@ -793,10 +938,13 @@
   <section id="projects" class="section">
     <div class="container-lg">
       <h2 class="section-title">Projects</h2>
+      <p class="section-intro">
+        A snapshot of AI engineering work and visual design projects that showcase how I combine technology with storytelling.
+      </p>
       
       <!-- Academic Projects -->
       <div class="project-category">
-        <h3 class="category-title">Academic Projects</h3>
+        <h3 class="category-title">AI Engineering Projects</h3>
         <div class="grid grid-3">
           
           <!-- ParkMate Project -->
@@ -805,11 +953,12 @@
                  onerror="this.src='https://picsum.photos/seed/parkmate/600/400'">
             <div class="project-content">
               <h3 class="project-title">ParkMate - Smart Parking System</h3>
-              <p class="project-description">AI-powered smart parking solution integrating IoT, license plate recognition, and mobile application.</p>
+              <p class="project-description">AI-powered smart parking solution integrating IoT, license plate recognition, and a mobile experience.</p>
               <div class="tags">
                 <span class="tag">AI</span>
+                <span class="tag">Computer Vision</span>
                 <span class="tag">IoT</span>
-                <span class="tag">Mobile Development</span>
+                <span class="tag">Product Design</span>
               </div>
               <div class="project-links">
                 <span class="project-year">2023</span>
@@ -828,7 +977,7 @@
 
       <!-- Professional Projects -->
       <div class="project-category">
-        <h3 class="category-title">Professional Projects</h3>
+        <h3 class="category-title">Graphic Design & Branding</h3>
         <div class="grid grid-3">
           
           <!-- FIT ON Project -->
@@ -882,74 +1031,77 @@
   <!-- Skills Section -->
   <section id="skills" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Skills & Expertise</h2>
+      <h2 class="section-title">Skills & Tooling</h2>
+      <p class="section-intro">
+        A mix of AI engineering, visual design, and product collaboration tools that help me deliver end-to-end experiences.
+      </p>
       <div class="grid grid-3">
         
         <!-- Programming & Web Development -->
         <div class="card">
-          <h3 class="text-xl font-semibold mb-4" style="color: var(--text-main);">Programming & Web Development</h3>
+          <h3 class="text-xl font-semibold mb-4" style="color: var(--text-main);">AI Engineering</h3>
           <div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              Python
+              Python & Data Science
             </div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              Java
+              Machine Learning
             </div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              SQL
+              Deep Learning Concepts
             </div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              C++
+              Data Preprocessing
             </div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              HTML/CSS/JavaScript
+              Model Deployment Basics
             </div>
           </div>
         </div>
 
         <!-- AI, Design & Databases -->
         <div class="card">
-          <h3 class="text-xl font-semibold mb-4" style="color: var(--text-main);">AI, Design & Databases</h3>
+          <h3 class="text-xl font-semibold mb-4" style="color: var(--text-main);">Design & Branding</h3>
           <div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              Artificial Intelligence & ML
+              Adobe Photoshop & Illustrator
             </div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              UI/UX Design: Figma
+              Figma UI/UX Systems
             </div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              Graphic Design (PS, AI, Canva)
+              Brand Identity Design
             </div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              Database Management
+              Product Mockups
             </div>
           </div>
         </div>
 
         <!-- Soft Skills -->
         <div class="card">
-          <h3 class="text-xl font-semibold mb-4" style="color: var(--text-main);">Soft Skills</h3>
+          <h3 class="text-xl font-semibold mb-4" style="color: var(--text-main);">Product & Collaboration</h3>
           <div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              Leadership & Teamwork
+              UI/UX Research
             </div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              Communication & Presentation
+              Rapid Prototyping
             </div>
             <div class="skill-item">
               <span class="skill-dot"></span>
-              Problem-Solving
+              Cross-functional Collaboration
             </div>
             <div class="skill-item">
               <span class="skill-dot"></span>
@@ -967,7 +1119,7 @@
     <div style="max-width: 56rem; margin: 0 auto;" class="text-center">
       <h2 class="section-title">Get In Touch</h2>
       <p class="text-xl" style="color: var(--text-muted); margin-bottom: 2rem;">
-        I'm always open to discussing new opportunities and interesting projects.
+        I'm open to AI engineering roles, design collaborations, and ambitious product ideas.
       </p>
       
       <div class="contact-grid">
@@ -1024,7 +1176,7 @@
 
       <div style="display: flex; flex-direction: column; gap: 1rem; justify-content: center;">
         <a href="mailto:tharushadil0@gmail.com" class="btn btn-primary">
-          Send Email
+          Start a Project
         </a>
         <a href="cv.pdf" target="_blank" class="btn btn-outline">
           Download CV
@@ -1037,7 +1189,7 @@
   <footer class="footer">
     <div class="container">
       <p class="footer-text">
-        © 2024 Tharusha Dilshan Bandara. All rights reserved.
+        © 2026 Tharusha Dilshan Bandara. All rights reserved.
       </p>
       <p class="footer-subtext">
         Built with passion and modern web technologies
